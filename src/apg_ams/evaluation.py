@@ -10,15 +10,20 @@ from sklearn.neighbors import KNeighborsClassifier, NeighborhoodComponentsAnalys
 from sklearn.preprocessing import StandardScaler
 from .core import apg_ams_predict_one, full_p_search_predict_one, P_GRID
 
-UCI_DATASETS={"Ionosphere":52,"Sonar":151,"Seeds":236,"MiceProtein":342}
+# Four additional importable real-world UCI classification datasets.
+UCI_DATASETS={"Ionosphere":52,"Sonar":151,"Banknote":267,"MiceProtein":342}
 
 def _clean_xy(X,y):
+    """Coerce features/target without fitting any data-dependent transform.
+
+    Missing-value imputation is deliberately deferred to each training fold in
+    _scale() to prevent train-test leakage.
+    """
     X=pd.DataFrame(X).apply(pd.to_numeric,errors="coerce").dropna(axis=1,how="all")
     y=pd.DataFrame(y).iloc[:,0]
     mask=~pd.isna(y)
     X=X.loc[mask].reset_index(drop=True); y=y.loc[mask].astype(str).reset_index(drop=True)
-    X=SimpleImputer(strategy="median").fit_transform(X)
-    return np.asarray(X,float),np.asarray(y)
+    return X.to_numpy(dtype=float),np.asarray(y)
 
 def dataset_catalog(include_uci=True,random_state=42):
     ds={}
@@ -35,6 +40,7 @@ def dataset_catalog(include_uci=True,random_state=42):
     return ds
 
 def _scale(Xtr,Xte):
+    # Fold-safe preprocessing: all fitted transforms see training data only.
     imp=SimpleImputer(strategy="median").fit(Xtr); Xtr=imp.transform(Xtr); Xte=imp.transform(Xte)
     sc=StandardScaler().fit(Xtr); return sc.transform(Xtr),sc.transform(Xte)
 
