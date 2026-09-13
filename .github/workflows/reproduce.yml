@@ -5,6 +5,10 @@ on:
   push:
     paths:
       - ".github/workflows/reproduce.yml"
+      - "src/apg_ams/**"
+      - "scripts/run_revision_experiments.py"
+      - "scripts/generate_revision_report.py"
+      - "requirements.txt"
 
 permissions:
   contents: write
