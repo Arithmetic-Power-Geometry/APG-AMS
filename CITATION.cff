@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the APG-AMS manuscript."
+title: "APG-AMS Reproducibility Artifact"
+authors:
+  - family-names: "Akhtar"
+    given-names: "Mohammad Amir Khusru"
+version: 0.1.0
+date-released: 2026-09-13
+license: Apache-2.0
+repository-code: "https://github.com/Arithmetic-Power-Geometry/APG-AMS"
