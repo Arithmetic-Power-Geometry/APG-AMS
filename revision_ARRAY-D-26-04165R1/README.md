@@ -21,4 +21,4 @@ No new large-scale ANN comparison or entropy-specific superiority is claimed. Th
 - [Source implementation](../src/apg_ams/)
 - [Tests](../tests/)
 
-**Date:** 11 November 2026. Revision due 17 November 2026.
+**Report date:** 11 November 2026.
