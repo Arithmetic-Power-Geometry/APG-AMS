@@ -1,6 +1,6 @@
 # P19 independent-seed screening validation — 2026-11-11
 
-New seed 2027, versus P18 seed 42; user-uploaded ISOLET and Fashion-MNIST official train/test pools. ISOLET: 1200 train, 150 calibration, 250 test, 617 dimensions; Fashion: 650 train, 100 calibration, 160 test, 784 dimensions. Train-only standardization, k=7, p={1,1.5,2,3,4}, 20% full-search-query budget.
+New seed 2027, versus P18 seed 42; ISOLET and Fashion-MNIST official train/test source archives. ISOLET: 1200 train, 150 calibration, 250 test, 617 dimensions; Fashion: 650 train, 100 calibration, 160 test, 784 dimensions. Train-only standardization, k=7, p={1,1.5,2,3,4}, 20% full-search-query budget.
 
 | Policy | ISOLET | Fashion-MNIST |
 |---|---:|---:|
@@ -16,4 +16,4 @@ New seed 2027, versus P18 seed 42; user-uploaded ISOLET and Fashion-MNIST offici
 
 **Limitations:** exploratory small stratified subsets, one new seed, same official test pools explored previously, post-hoc research direction, no latency benchmark, no uncertainty intervals. Fixed budget counts FullP query selections, not measured speedups.
 
-Full local files in conversation: `/mnt/data/apg_p19/p19_confirm.py`, `p19_results.json`, `P19_VALIDATION_REPORT.md`. Next: test whether an entropy-derived residual adds value beyond Euclidean confidence on a fresh held-out protocol.
+The experimental script and JSON output were supplied as separate supplementary materials. Further validation should test whether an entropy-derived residual adds value beyond Euclidean confidence on a fresh held-out protocol.
