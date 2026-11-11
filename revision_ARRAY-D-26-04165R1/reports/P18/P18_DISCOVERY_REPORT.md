@@ -1,6 +1,6 @@
 # P18 — Exploratory high-dimensional entropy-gate reversal
 
-Date: 2026-11-11. Inputs: user-uploaded Fashion-MNIST repository ZIP and ISOLET UCI ZIP. Both contain the required labeled images/features.
+Date: 2026-11-11. Inputs: Fashion-MNIST and ISOLET source archives. Both contain the required labeled images/features.
 
 **Design:** Official dataset train/test partitions; stratified subsets (seed 42). ISOLET: 1,200 train, 150 calibration, 250 test, 617 features. Fashion-MNIST: 650 train, 100 calibration, 160 test, 784 features. Train-only StandardScaler, k=7, p={1,1.5,2,3,4}; full search chooses p maximizing training-neighborhood vote purity with deterministic tie-breaks. Entropy is Shannon entropy of squared per-query minmax-positive transformed standardized coordinates. Budgets fixed to 10%, 20%, 40% full-search queries, same for every screening policy. FullP predictions precomputed offline; this is **not a runtime experiment**.
 
@@ -19,4 +19,4 @@ Date: 2026-11-11. Inputs: user-uploaded Fashion-MNIST repository ZIP and ISOLET 
 
 **Limitations:** Small subsets, one seed, no inferential intervals, no runtime or ANN, retrospective budgets, test exploration and potential selection bias. Next: lock selection on calibration data and evaluate on a genuinely untouched test partition across multiple seeds, measuring full pipeline latency. Do not make superiority claims now.
 
-Local reproducible script: `/mnt/data/apg_p18/p18_probe.py`; output: `/mnt/data/apg_p18/p18_results.json`. User-supplied ZIPs required. ISOLET .Z members must be uncompressed with `uncompress -c`.
+The experimental script and JSON output are supplied in the separate supplementary archive, not in this public report directory. The ISOLET `.Z` members require decompression with `uncompress -c`.
