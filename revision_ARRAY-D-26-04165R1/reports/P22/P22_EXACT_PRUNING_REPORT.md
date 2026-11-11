@@ -14,4 +14,4 @@ ISOLET official training/test pools; seed 2901 stratified subsamples of 600 trai
 
 **Honest interpretation:** This demonstrates **exact arithmetic-work reduction** against exhaustive p-distance calculation; it does NOT demonstrate elapsed-time superiority, because the Python loop is much slower than optimized SciPy. Early abandonment is established prior art and not an entropy-specific novelty. A compiled/vectorized implementation and direct comparison to optimized FullP, L2, and confidence screening is needed. The method may be useful as an exact FullP subroutine in APG-AMS but cannot rescue unsupported entropy superiority.
 
-Reproduce: `python p22_exact_pruning.py` with user-uploaded ISOLET and prepared extracted ISOLET data. Local results JSON accompanies script.
+To reproduce, run `python p22_exact_pruning.py` using the ISOLET source data. The associated script and JSON results were supplied separately as supplementary materials.
