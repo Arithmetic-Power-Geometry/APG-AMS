@@ -4,9 +4,8 @@ Manuscript: ARRAY-D-26-04165R1, *APG-AMS: Entropy-Guided Screening for Adaptive 
 
 ## Revision deliverables
 - **16-page** revised manuscript, Elsevier `elsarticle` PDF and editable LaTeX source.
-- Five-page point-by-point reviewer response for **Reviewers 3, 5, 6 and 8**, plus a text version for the editorial response fields. Reviewers 1 and 2 had earlier replies in the platform.
+- Five-page point-by-point reviewer response for **Reviewers 3, 5, 6 and 8**, with the corresponding point-by-point revisions documented.
 - Flat, independently compiled LaTeX source ZIP containing the three external PNG figures; complete release ZIP includes supplementary evidence scripts, archived outputs, cover letter, highlights and an audit.
-- Original public repository `Arithmetic-Power-Geometry/APG-AMS` was read and left unchanged; private revision repository `Arithmetic-Power-Geometry/APG_AMS` used for the review audit.
 
 ## Citation and typesetting verification
 - Seven tables, four figures, three algorithms: **all have manuscript citations**.
@@ -35,5 +34,3 @@ Manuscript: ARRAY-D-26-04165R1, *APG-AMS: Entropy-Guided Screening for Adaptive 
 
 The PDF and ZIP deliverables are not committed to this public repository; supplementary files were supplied separately with the journal revision.
 
-## Submission
-Editor email of 3 Nov 2026 requests point-by-point responses; revision due **17 Nov 2026**. The peer review platform requires a response to every reviewer comment. Files have been prepared, but no submission action has been performed.
